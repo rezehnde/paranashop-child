@@ -1,1 +1,2 @@
-# paranashop-child is a WordPress Child Theme for Rubik WordPress Theme
+# WordPress Child Theme for Rubik WordPress Theme
+https://themeforest.net/item/rubik-a-perfect-theme-for-blog-magazine-website/22917307
