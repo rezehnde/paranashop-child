@@ -10,3 +10,19 @@
     text-align: center;
     padding: 20px;
 }
+.field.search-form-text::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #fff !important; 
+} 
+  
+.field.search-form-text::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff !important;
+    opacity: 1 !important;
+}
+
+.field.search-form-text:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #fff; 
+} 
+  
+.field.search-form-text::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #fff; 
+}

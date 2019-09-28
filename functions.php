@@ -27,6 +27,31 @@ function rubik_child_widgets_init() {
 
 }
 
+function rubik_ajax_form_search($moreClass = '', $topBar = 0)
+{
+    $rubik_option = rubik_core::bk_get_global_var('rubik_option');
+    $inputSearchPlaceholder = '';
+    if($topBar == 1) {
+        if (isset($rubik_option['bk-input-search-placeholder-top-bar'])) :
+            $inputSearchPlaceholder = $rubik_option['bk-input-search-placeholder-top-bar'];
+        endif;
+    }else {
+        if (isset($rubik_option['bk-input-search-placeholder-main-nav'])) :
+            $inputSearchPlaceholder = $rubik_option['bk-input-search-placeholder-main-nav'];
+        endif;
+    }
+    $str = '';
+    $str .= '<div class="ajax-search-wrap '.$inputSearchPlaceholder.'">';
+    $str .= '<div class="ajax-form-search ajax-search-icon '.$moreClass.'"><i class="fa fa-search"></i><i class="fa fa-times"></i></div>';
+    $str .= '<form class="ajax-form" method="get" action="' . esc_url(home_url('/')) . '">';
+    $str .= '<fieldset>';
+    $str .= '<input type="text" class="field search-form-text" name="s" autocomplete="off" value="" placeholder="' . esc_attr__('Digite sua busca e tecle enter...', 'rubik') . '">';
+    $str .= '</fieldset>';
+    $str .= '</form>';
+    $str .= ' <div class="ajax-search-result"></div></div>';
+    return $str;
+}
+
 function rubik_get_header () {
 
     echo '<div style="text-align: center; padding: 20px;">';
