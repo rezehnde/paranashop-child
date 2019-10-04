@@ -27,6 +27,12 @@ function rubik_child_widgets_init() {
 
 }
 
+function paranashop_content($content)
+{
+    return '<div class="shareaholic-canvas" data-app="share_buttons" data-app-id-name="post_above_content"></div>'.$content;
+}
+add_filter('the_content', 'paranashop_content');
+
 function rubik_ajax_form_search($moreClass = '', $topBar = 0)
 {
     $rubik_option = rubik_core::bk_get_global_var('rubik_option');
